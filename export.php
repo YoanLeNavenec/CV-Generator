@@ -1,13 +1,18 @@
 <?php
-require 'vendor / autoload . php ';
-use Dompdf \ Dompdf ;
+// reference the Dompdf namespace
+use Dompdf\Dompdf;
 
-ob_start () ;
-include 'cv.php ';
-$html = ob_get_clean () ; // le contenu de cv. php est inséré dans la variable html
-$pdf = new Dompdf () ; // création du pdf
-$pdf - > loadHtml ($html ); // chargement du contenu dans Dompdf
-$pdf - > setPaper ('A4 ') ; // configuration du format
-$pdf - > render () ; // rendu du pdf
-$pdf - > stream ("cv. pdf ") ; // envoi au navigateur
+// instantiate and use the dompdf class
+$dompdf = new Dompdf();
+$dompdf->getOptions()->setChroot('/path/to/common/assets-directory');
+$dompdf->loadHtml('hello world');
+
+// (Optional) Setup the paper size and orientation
+$dompdf->setPaper('A4', 'landscape');
+
+// Render the HTML as PDF
+$dompdf->render();
+
+// Output the generated PDF to Browser
+$dompdf->stream();
 ?>

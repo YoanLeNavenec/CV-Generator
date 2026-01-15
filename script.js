@@ -1,4 +1,5 @@
 var down = document.getElementById("ExpPro");
+var br = document.createElement("br"); 
 
 function AddJob() {
     var JobName = document.createElement("input");
@@ -26,5 +27,4 @@ function AddJob() {
     document.querySelector("#ExpPro").appendChild(JobLocation);
     document.querySelector("#ExpPro").appendChild(JobDescription);
 
-   
   }

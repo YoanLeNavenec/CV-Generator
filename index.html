@@ -9,49 +9,61 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </head>
 
-  <body>
-    <h1>Enter your informations</h1>
-    <div class="container">
-          <div class="col-1">
-            <h2>Contact</h2>
-                <form>
-                  <input type="text" id="Name" placeholder="Pooch Hyena" required>
-                  <input type="text" id="SubTitle" placeholder="Apprentice as a Pokemon Master" required>
-                  <input type="text" id="Email" placeholder="PoochHyena@Hoen.pkmn" required>
-                  <input type="text" id="Phone" placeholder="0261026233" required>
-                  <input type="text" id="Adress" placeholder="123, Pkmn Safari" required>
-          </div>
-              
-          <div class="col-1">
-            <h2>Professional Skills</h2>
-                  <input type="text" id="Skill1" placeholder="Growl" required>
-                  <input type="text" id="Skill2" placeholder="Bite" required>
-                  <input type="text" id="Skill3" placeholder="Pursuit" required>
-                  <input type="text" id="Skill4" placeholder="Quick Attack">
-                  <input type="text" id="Skill5" placeholder="Struggle">
-          </div>
+  <body class="bg-primary-subtle bg-primary.bg-gradient">
+    <div class="container d-flex flex-row">
+      <div class="container d-flex flex-column gap-2">
+        <h1>Enter your informations</h1>
+            <div class="col-1">
+              <h2>Contact</h2>
+                  <form>
+                    <input type="text" id="Name" placeholder="Pooch Hyena" required>
+                    <input type="text" id="SubTitle" placeholder="Apprentice as a Pokemon Master" required>
+                    <input type="text" id="Email" placeholder="PoochHyena@Hoen.pkmn" required>
+                    <input type="text" id="Phone" placeholder="0261026233" required>
+                    <input type="text" id="Adress" placeholder="123, Pkmn Safari" required>
+            </div>
+                
+            <div class="col-1">
+              <h3>Professional Skills</h3>
+                    <input type="text" id="Skill1" placeholder="Growl" required>
+                    <input type="text" id="Skill2" placeholder="Bite" required>
+                    <input type="text" id="Skill3" placeholder="Pursuit" required>
+                    <input type="text" id="Skill4" placeholder="Quick Attack">
+                    <input type="text" id="Skill5" placeholder="Struggle">
+            </div>
 
-          <div class="col-1"> 
-            <h2>Soft Skills</h2>
-                  <input type="text" id="SoftSkill1" placeholder="Pack Work" required>
-                  <input type="text" id="SoftSkill2" placeholder="Street Smart" required>
-                  <input type="text" id="SoftSkill3" placeholder="Persistant" required>
-                  <input type="text" id="SoftSkill4" placeholder="Warm">
-                  <input type="text" id="SoftSkill5" placeholder="Soft">
-          </div>
+            <div class="col-1"> 
+              <h3>Soft Skills</h3>
+                    <input type="text" id="SoftSkill1" placeholder="Pack Work" required>
+                    <input type="text" id="SoftSkill2" placeholder="Street Smart" required>
+                    <input type="text" id="SoftSkill3" placeholder="Persistant" required>
+                    <input type="text" id="SoftSkill4" placeholder="Warm">
+                    <input type="text" id="SoftSkill5" placeholder="Soft">
+            </div>
 
-          <div class="col-1" id="ExpPro">
-            <h2>Professional Experience</h2>
-                  <input type="text" class="WorkTitle" placeholder="Feral Pokemon" required>
-                  <input type="text" class="WorkPeriod" placeholder="3th gen > 8th gen" required>
-                  <input type="text" class="WorkLocation" placeholder="Road 6" required>
-                  <input type="text" class="WorkDescription" placeholder="Feral Pokemon to practice new trainers" required>
-                </form>   
-          </div>
+            <div class="col-1" id="ExpPro">
+              <h3>Professional Experience</h3>
+                    <input type="text" class="WorkTitle" placeholder="Feral Pokemon" required>
+                    <input type="text" class="WorkPeriod" placeholder="3th gen > 8th gen" required>
+                    <input type="text" class="WorkLocation" placeholder="Road 6" required>
+                    <input type="text" class="WorkDescription" placeholder="Feral Pokemon to practice new trainers" required>
+                  </form>        
+            </div>
 
-          <button onclick="AddJob()"> Add an Experience </button> 
-        
+            <div class="d-flex flex-column gap-4">
+              <button class="btn btn-primary btn-sm" onclick="AddJob()"> Add an Experience </button> 
+              <button type="button" class="btn btn-success btn-sm" onclick="GenResume()">Create your Resume</button>
+            </div>
+
       </div>
+
+      <div id="Preview" class="flex-column">
+        <h2>Preview your Resume</h2>
+        <p><span id="PreviewName"></span></p> 
+        <p><span id="PreviewName"></span></p>
+        <p><span id="PreviewName"></span></p>
+      </div>
+    </div>
       <script src="script.js"></script>
   </body>
 </html>
