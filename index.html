@@ -16,11 +16,25 @@
             <div class="col-1">
               <h2>Contact</h2>
                   <form>
+                    <label for="Name" class="form-label">Your Name</label>
                     <input type="text" id="Name" placeholder="Pooch Hyena" required>
+                    
+                    <label for="SubTitle" class="form-label">Objective</label>
                     <input type="text" id="SubTitle" placeholder="Apprentice as a Pokemon Master" required>
+
+                    <label for="Email" class="form-label">Your Email</label>
                     <input type="text" id="Email" placeholder="PoochHyena@Hoen.pkmn" required>
+
+                    <label for="Phone" class="form-label">Your Phone Number</label>
                     <input type="text" id="Phone" placeholder="0261026233" required>
+
+                    <label for="Adress" class="form-label">Your Adress</label>
                     <input type="text" id="Adress" placeholder="123, Pkmn Safari" required>
+            </div>
+
+            <div>
+              <h3>Picture of you</h3>
+                <input type="file" id="Picture" accept="image/*"
             </div>
                 
             <div class="col-1">
@@ -59,9 +73,12 @@
 
       <div id="Preview" class="flex-column">
         <h2>Preview your Resume</h2>
-        <p><span id="PreviewName"></span></p> 
-        <p><span id="PreviewName"></span></p>
-        <p><span id="PreviewName"></span></p>
+        <div id="ResumeHeader">
+          <div>
+
+          </div>
+          <div id="ResumePicture"></div>
+        </div>
       </div>
     </div>
       <script src="script.js"></script>

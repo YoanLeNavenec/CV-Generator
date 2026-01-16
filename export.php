@@ -8,7 +8,7 @@ $dompdf->getOptions()->setChroot('/path/to/common/assets-directory');
 $dompdf->loadHtml('hello world');
 
 // (Optional) Setup the paper size and orientation
-$dompdf->setPaper('A4', 'landscape');
+$dompdf->setPaper('A4');
 
 // Render the HTML as PDF
 $dompdf->render();
