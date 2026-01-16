@@ -1,5 +1,4 @@
 var down = document.getElementById("ExpPro");
-var br = document.createElement("br"); 
 
 function AddJob() {
     var JobName = document.createElement("input");
@@ -27,4 +26,37 @@ function AddJob() {
     document.querySelector("#ExpPro").appendChild(JobLocation);
     document.querySelector("#ExpPro").appendChild(JobDescription);
 
+  }
+
+  var down = document.getElementById("Diplos");
+
+  function AddDiploma() {
+    var DiploName = document.createElement("input");
+    DiploName.setAttribute("type", "text");
+    DiploName.setAttribute("class", "Diploma")
+    DiploName.setAttribute("placeholder", "Ribbon");
+
+    document.querySelector("#Diplos").appendChild(DiploName);
+  }
+
+  var down = document.getElementById("Skills");
+
+  function AddSkill() {
+    var SkillName = document.createElement("input");
+    SkillName.setAttribute("type", "text");
+    SkillName.setAttribute("class", "Skill")
+    SkillName.setAttribute("placeholder", "Thunder Jaw");
+
+    document.querySelector("#Skills").appendChild(SkillName);
+  }
+
+   var down = document.getElementById("SoftSkill");
+
+  function AddSoftSkill() {
+    var SoftSkillName = document.createElement("input");
+    SoftSkillName.setAttribute("type", "text");
+    SoftSkillName.setAttribute("class", "SoftSkill")
+    SoftSkillName.setAttribute("placeholder", "Fast");
+
+    document.querySelector("#SoftSkill").appendChild(SoftSkillName);
   }

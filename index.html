@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </head>
 
-  <body class="bg-primary-subtle bg-primary.bg-gradient">
+  <body class="bg-primary-subtle">
     <div class="container d-flex flex-row">
       <div class="container d-flex flex-column gap-2">
         <h1>Enter your informations</h1>
@@ -17,45 +17,66 @@
               <h2>Contact</h2>
                   <form>
                     <label for="Name" class="form-label">Your Name</label>
-                    <input type="text" id="Name" placeholder="Pooch Hyena" required>
+                    <input type="text" id="Name" placeholder="Pooch Hyena" class="input" required>
                     
                     <label for="SubTitle" class="form-label">Objective</label>
-                    <input type="text" id="SubTitle" placeholder="Apprentice as a Pokemon Master" required>
+                    <input type="text" id="SubTitle" placeholder="Apprentice as a Pokemon Master" class="form-control" required>
 
                     <label for="Email" class="form-label">Your Email</label>
-                    <input type="text" id="Email" placeholder="PoochHyena@Hoen.pkmn" required>
+                    <input type="text" id="Email" placeholder="PoochHyena@Hoen.pkmn" class="input" required>
 
                     <label for="Phone" class="form-label">Your Phone Number</label>
-                    <input type="text" id="Phone" placeholder="0261026233" required>
+                    <input type="text" id="Phone" placeholder="0261026233" class="input" required>
 
                     <label for="Adress" class="form-label">Your Adress</label>
-                    <input type="text" id="Adress" placeholder="123, Pkmn Safari" required>
+                    <input type="text" id="Adress" placeholder="123, Pkmn Safari" class="input" required>
             </div>
 
             <div>
               <h3>Picture of you</h3>
-                <input type="file" id="Picture" accept="image/*"
+                <input type="file" id="Picture" accept="image/*">
+            </div>
+
+             <div class="col-1" id="Diplos">
+              <h3>Diplomas</h3>
+                    <input type="text" class="Diploma" placeholder="Stone Badge" required>
+                    <input type="text" class="Diploma" placeholder="Knuckle Badge" required>
+                    <input type="text" class="Diploma" placeholder="Dynamo Badge" required>
+                    <input type="text" class="Diploma" placeholder="Heat Badge">
+                    <input type="text" class="Diploma" placeholder="Balance Badge">
+            </div>
+
+            <div>
+              <button type="button" class="btn btn-primary btn-sm" onclick="AddDiploma()"> Add a Diploma</button> 
             </div>
                 
-            <div class="col-1">
+            <div class="col-1" id="Skills">
               <h3>Professional Skills</h3>
-                    <input type="text" id="Skill1" placeholder="Growl" required>
-                    <input type="text" id="Skill2" placeholder="Bite" required>
-                    <input type="text" id="Skill3" placeholder="Pursuit" required>
-                    <input type="text" id="Skill4" placeholder="Quick Attack">
-                    <input type="text" id="Skill5" placeholder="Struggle">
+                    <input type="text" class="Skills" placeholder="Growl" required>
+                    <input type="text" class="Skills" placeholder="Bite" required>
+                    <input type="text" class="Skills" placeholder="Pursuit" required>
+                    <input type="text" class="Skills" placeholder="Quick Attack">
+                    <input type="text" class="Skills" placeholder="Struggle">
             </div>
 
-            <div class="col-1"> 
+            <div>
+              <button type="button" class="btn btn-primary btn-sm" onclick="AddSkill()"> Add a Skill</button> 
+            </div>
+
+            <div class="col-1" id="SoftSkill"> 
               <h3>Soft Skills</h3>
-                    <input type="text" id="SoftSkill1" placeholder="Pack Work" required>
-                    <input type="text" id="SoftSkill2" placeholder="Street Smart" required>
-                    <input type="text" id="SoftSkill3" placeholder="Persistant" required>
-                    <input type="text" id="SoftSkill4" placeholder="Warm">
-                    <input type="text" id="SoftSkill5" placeholder="Soft">
+                    <input type="text" class="SoftSkill" placeholder="Pack Work" required>
+                    <input type="text" class="SoftSkill" placeholder="Street Smart" required>
+                    <input type="text" class="SoftSkill" placeholder="Persistant" required>
+                    <input type="text" class="SoftSkill" placeholder="Warm">
+                    <input type="text" class="SoftSkill" placeholder="Soft">  
             </div>
 
-            <div class="col-1" id="ExpPro">
+            <div>
+              <button type="button" class="btn btn-primary btn-sm" onclick="AddSoftSkill()"> Add a Soft Skill</button> 
+            </div>
+
+            <div class="col-1" id="ExpPro"> 
               <h3>Professional Experience</h3>
                     <input type="text" class="WorkTitle" placeholder="Feral Pokemon" required>
                     <input type="text" class="WorkPeriod" placeholder="3th gen > 8th gen" required>
@@ -64,8 +85,10 @@
                   </form>        
             </div>
 
-            <div class="d-flex flex-column gap-4">
-              <button class="btn btn-primary btn-sm" onclick="AddJob()"> Add an Experience </button> 
+            <div>
+              <button class="btn btn-primary btn-sm" onclick="AddJob()">Add an Experience</button> 
+            </div>
+              <div>
               <button type="button" class="btn btn-success btn-sm" onclick="GenResume()">Create your Resume</button>
             </div>
 
