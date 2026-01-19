@@ -16,89 +16,106 @@
             <div class="col-1">
               <h2>Contact</h2>
                   <form>
-                    <label for="Name" class="form-label">Your Name</label>
-                    <input type="text" id="Name" placeholder="Pooch Hyena" class="input" required>
+                    <label class="form-label">Your Name
+                      <input type="text" name="Name" placeholder="Pooch Hyena" class="input form-control-lg" required>
+                    </label>
                     
-                    <label for="SubTitle" class="form-label">Objective</label>
-                    <input type="text" id="SubTitle" placeholder="Apprentice as a Pokemon Master" class="form-control" required>
+                    <label class="form-label">Objective
+                      <input type="text" name="SubTitle" placeholder="Apprentice as a Pokemon Master" class="input form-control-lg" required>
+                    </label>
 
-                    <label for="Email" class="form-label">Your Email</label>
-                    <input type="text" id="Email" placeholder="PoochHyena@Hoen.pkmn" class="input" required>
+                    <label class="form-label">Your Email
+                      <input type="text" name="Email" placeholder="PoochHyena@Hoen.pkmn" class="input form-control-lg" required>
+                    </label>
 
-                    <label for="Phone" class="form-label">Your Phone Number</label>
-                    <input type="text" id="Phone" placeholder="0261026233" class="input" required>
+                    <label class="form-label">Your Phone Number
+                      <input type="text" name="Phone" placeholder="0261026233" class="input form-control-lg" required>
+                    </label>
 
-                    <label for="Adress" class="form-label">Your Adress</label>
-                    <input type="text" id="Adress" placeholder="123, Pkmn Safari" class="input" required>
+                    <label class="form-label">Your Adress
+                      <input type="text" name="Adress" placeholder="123, Pkmn Safari" class="input form-control-lg" required>
+                    </label>
             </div>
 
-            <div>
-              <h3>Picture of you</h3>
-                <input type="file" id="Picture" accept="image/*">
-            </div>
+            
+                    <div>
+                      <h3>Picture of you</h3>
+                        <input type="file" name="Picture" accept="image/*">
+                    </div>
+                    
+                    <div class="col-1" id="ExpPro"> 
+                      <h3>Professional Experience</h3>
+                            <label class="form-label">Job Name
+                              <input type="text" class="form-control-lg" placeholder="Feral Pokemon" name="JobName1" required>
+                            </label>
 
-            <div>
-              <button type="button" class="btn btn-primary btn-sm" onclick="AddDiploma()"> Add a Diploma</button> 
-            </div>
-                
-            <div class="col-1" id="ExpPro"> 
-              <h3>Professional Experience</h3>
-                    <input type="text" class="WorkTitle" placeholder="Feral Pokemon" required>
-                    <input type="text" class="WorkPeriod" placeholder="3th gen > 8th gen" required>
-                    <input type="text" class="WorkLocation" placeholder="Road 6" required>
-                    <input type="text" class="WorkDescription" placeholder="Feral Pokemon to practice new trainers" required>
-                  </form>        
-            </div>
+                            <label class="form-label">Work Period
+                              <input type="text" class="form-control-lg" placeholder="3th gen > 8th gen" name="WorkPeriod1" required>
+                            </label>
 
-            <div class="col-1" id="Diplos">
-              <h3>Diplomas</h3>
-                    <input type="text" class="Diploma" placeholder="Stone Badge" required>
-                    <input type="text" class="Diploma" placeholder="Knuckle Badge" required>
-                    <input type="text" class="Diploma" placeholder="Dynamo Badge" required>
-                    <input type="text" class="Diploma" placeholder="Heat Badge">
-                    <input type="text" class="Diploma" placeholder="Balance Badge">
-            </div>
+                            <label class="form-label">Work Location
+                              <input type="text" class="form-control-lg" placeholder="Road 6" name="WorkLocation1" required>
+                            </label>
+                            
+                            <label class="form-label">Work Description
+                              <input type="text" class="form-control-lg" placeholder="Feral Pokemon to practice new trainers" required>
+                            </label>       
+                    </div>
 
-            <div>
-              <button class="btn btn-primary btn-sm" onclick="AddJob()">Add an Experience</button> 
-            </div>
+                        <div>
+                          <button class="btn btn-primary btn-sm" onclick="AddJob()">Add an Experience</button> 
+                        </div>
 
-            <div class="col-1" id="Skills">
-              <h3>Professional Skills</h3>
-                    <input type="text" class="Skills" placeholder="Growl" required>
-                    <input type="text" class="Skills" placeholder="Bite" required>
-                    <input type="text" class="Skills" placeholder="Pursuit" required>
-                    <input type="text" class="Skills" placeholder="Quick Attack">
-                    <input type="text" class="Skills" placeholder="Struggle">
-            </div>
+                        <div class="col-1" id="Diplos">
+                          <h3>Diplomas</h3>
+                                <input type="text" class="Diploma" placeholder="Stone Badge" required>
+                                <input type="text" class="Diploma" placeholder="Knuckle Badge" required>
+                                <input type="text" class="Diploma" placeholder="Dynamo Badge" required>
+                                <input type="text" class="Diploma" placeholder="Heat Badge">
+                                <input type="text" class="Diploma" placeholder="Balance Badge">
+                        </div>
 
-            <div>
-              <button type="button" class="btn btn-primary btn-sm" onclick="AddSkill()"> Add a Skill</button> 
-            </div>
+                    <div>
+                      <button type="button" class="btn btn-primary btn-sm" onclick="AddDiploma()"> Add a Diploma</button> 
+                    </div>
 
-            <div class="col-1" id="SoftSkill"> 
-              <h3>Soft Skills</h3>
-                    <input type="text" class="SoftSkill" placeholder="Pack Work" required>
-                    <input type="text" class="SoftSkill" placeholder="Street Smart" required>
-                    <input type="text" class="SoftSkill" placeholder="Persistant" required>
-                    <input type="text" class="SoftSkill" placeholder="Warm">
-                    <input type="text" class="SoftSkill" placeholder="Soft">  
-            </div>
+                    <div class="col-1" id="Skills">
+                      <h3>Professional Skills</h3>
+                            <input type="text" class="Skills" placeholder="Growl" required>
+                            <input type="text" class="Skills" placeholder="Bite" required>
+                            <input type="text" class="Skills" placeholder="Pursuit" required>
+                            <input type="text" class="Skills" placeholder="Quick Attack">
+                            <input type="text" class="Skills" placeholder="Struggle">
+                    </div>
 
-            <div>
-              <button type="button" class="btn btn-primary btn-sm" onclick="AddSoftSkill()"> Add a Soft Skill</button> 
-            </div>
+                    <div>
+                      <button type="button" class="btn btn-primary btn-sm" onclick="AddSkill()"> Add a Skill</button> 
+                    </div>
 
+                    <div class="col-1" id="SoftSkill"> 
+                      <h3>Soft Skills</h3>
+                            <input type="text" class="SoftSkill" placeholder="Pack Work" required>
+                            <input type="text" class="SoftSkill" placeholder="Street Smart" required>
+                            <input type="text" class="SoftSkill" placeholder="Persistant" required>
+                            <input type="text" class="SoftSkill" placeholder="Warm">
+                            <input type="text" class="SoftSkill" placeholder="Soft">  
+                    </div>
+
+                    <div>
+                      <button type="button" class="btn btn-primary btn-sm" onclick="AddSoftSkill()"> Add a Soft Skill</button> 
+                    </div>
+
+                      <div>
+                      <button type="submit" class="btn btn-success btn-sm" onclick="GenResume()">Create your Resume</button>
+                    </div>
+
+                  </form> 
+          </div>
+
+          <div id="Resume" class="flex-column preview">
+            <h2>Preview your Resume</h2>
+            <div class="ResumeHeader">
               <div>
-              <button type="button" class="btn btn-success btn-sm" onclick="GenResume()">Create your Resume</button>
-            </div>
-
-      </div>
-
-      <div id="Resume" class="flex-column preview">
-        <h2>Preview your Resume</h2>
-        <div class="ResumeHeader">
-          <div>
 
             <div>
               <p><span id="PreviewPhone">Your Number</span></p>
@@ -109,9 +126,10 @@
             <div id="PreviewPicture"></div>
           </div>
 
-          <div>
 
-          </div>
+            <div>
+              <p><span id="PreviewSubTitle">Your Objective</span></p>
+            </div>
 
           <div class="box">
             <h3>Professional Experience</h3>
