@@ -8,3 +8,49 @@
   border: none;
 }
 
+
+
+.form{
+  width: 40rem;
+}
+
+.container{
+  display: flex;
+  gap: 3rem;
+  padding: 3rem 2rem;
+}
+
+.container input{
+  margin-bottom: 1rem;
+}
+
+.btn{
+  cursor: pointer;
+}
+
+
+
+
+.preview{
+  width: 794px;
+  padding: 2rem;
+  border: .1rem solid grey;
+  background: white;
+  box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+  border-radius: 0.5rem;
+}
+
+.preview .ResumeHeader{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+
+.preview  .ResumeHeader .picture{
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  background: white;
+  position: relative;
+}

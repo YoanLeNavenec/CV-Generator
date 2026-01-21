@@ -11,7 +11,7 @@
 
   <body class="bg-primary-subtle">
     <div class="container d-flex flex-row">
-      <div class="container d-flex flex-column gap-2">
+      <div class="d-flex flex-column gap-2">
         <h1>Enter your informations</h1>
             <div class="col-1">
               <h2>Contact</h2>
@@ -63,73 +63,74 @@
                     </div>
 
                         <div>
-                          <button class="btn btn-primary btn-sm" onclick="AddJob()">Add an Experience</button> 
+                          <button class="btn btn-primary btn" onclick="AddJob()">Add an Experience</button> 
                         </div>
 
                         <div class="col-1" id="Diplos">
                           <h3>Diplomas</h3>
-                                <input type="text" class="Diploma" placeholder="Stone Badge" required>
-                                <input type="text" class="Diploma" placeholder="Knuckle Badge" required>
-                                <input type="text" class="Diploma" placeholder="Dynamo Badge" required>
-                                <input type="text" class="Diploma" placeholder="Heat Badge">
-                                <input type="text" class="Diploma" placeholder="Balance Badge">
+                                <input type="text" class="Diploma form-control-lg" placeholder="Stone Badge" required>
+                                <input type="text" class="Diploma form-control-lg" placeholder="Knuckle Badge" required>
+                                <input type="text" class="Diploma form-control-lg" placeholder="Dynamo Badge" required>
+                                <input type="text" class="Diploma form-control-lg" placeholder="Heat Badge">
+                                <input type="text" class="Diploma form-control-lg" placeholder="Balance Badge">
                         </div>
 
                     <div>
-                      <button type="button" class="btn btn-primary btn-sm" onclick="AddDiploma()"> Add a Diploma</button> 
+                      <button type="button" class="btn btn-primary btn" onclick="AddDiploma()"> Add a Diploma</button> 
                     </div>
 
                     <div class="col-1" id="Skills">
                       <h3>Professional Skills</h3>
-                            <input type="text" class="Skills" placeholder="Growl" required>
-                            <input type="text" class="Skills" placeholder="Bite" required>
-                            <input type="text" class="Skills" placeholder="Pursuit" required>
-                            <input type="text" class="Skills" placeholder="Quick Attack">
-                            <input type="text" class="Skills" placeholder="Struggle">
+                            <input type="text" class="Skills form-control-lg" placeholder="Growl" required>
+                            <input type="text" class="Skills form-control-lg" placeholder="Bite" required>
+                            <input type="text" class="Skills form-control-lg" placeholder="Pursuit" required>
+                            <input type="text" class="Skills form-control-lg" placeholder="Quick Attack">
+                            <input type="text" class="Skills form-control-lg" placeholder="Struggle">
                     </div>
 
                     <div>
-                      <button type="button" class="btn btn-primary btn-sm" onclick="AddSkill()"> Add a Skill</button> 
+                      <button type="button" class="btn btn-primary btn" onclick="AddSkill()"> Add a Skill</button> 
                     </div>
 
                     <div class="col-1" id="SoftSkill"> 
                       <h3>Soft Skills</h3>
-                            <input type="text" class="SoftSkill" placeholder="Pack Work" required>
-                            <input type="text" class="SoftSkill" placeholder="Street Smart" required>
-                            <input type="text" class="SoftSkill" placeholder="Persistant" required>
-                            <input type="text" class="SoftSkill" placeholder="Warm">
-                            <input type="text" class="SoftSkill" placeholder="Soft">  
+                            <input type="text" class="SoftSkill form-control-lg" placeholder="Pack Work" required>
+                            <input type="text" class="SoftSkill form-control-lg" placeholder="Street Smart" required>
+                            <input type="text" class="SoftSkill form-control-lg" placeholder="Persistant" required>
+                            <input type="text" class="SoftSkill form-control-lg" placeholder="Warm">
+                            <input type="text" class="SoftSkill form-control-lg" placeholder="Soft">  
                     </div>
 
                     <div>
-                      <button type="button" class="btn btn-primary btn-sm" onclick="AddSoftSkill()"> Add a Soft Skill</button> 
+                      <button type="button" class="btn btn-primary btn" onclick="AddSoftSkill()"> Add a Soft Skill</button> 
                     </div>
 
                       <div>
-                      <button type="submit" class="btn btn-success btn-sm" onclick="GenResume()">Create your Resume</button>
+                      <button type="submit" class="btn btn-success btn" onclick="GenResume()">Create your Resume</button>
                     </div>
 
                   </form> 
           </div>
 
-          <div id="Resume" class="flex-column preview">
+          <div id="Resume" class="flex-column preview container">
             <h2>Preview your Resume</h2>
             <div class="ResumeHeader">
+
+              <div id="PreviewPicture" class="picture"></div>
+
               <div>
+                <p><span id="PreviewPhone">Your Number</span></p>
+                <p><span id="PreviewEmail">Your Email</span></p>
+                <p><span id="PreviewAdress">your Adress</span></p>
+              </div>
 
-            <div>
-              <p><span id="PreviewPhone">Your Number</span></p>
-              <p><span id="PreviewEmail">Your Email</span></p>
-              <p><span id="PreviewAdress">your Adress</span></p>
-            </div>
-
-            <div id="PreviewPicture"></div>
-          </div>
-
-
-            <div>
+              <div>
               <p><span id="PreviewSubTitle">Your Objective</span></p>
             </div>
+            </div>
+          
+            
+            
 
           <div class="box">
             <h3>Professional Experience</h3>
