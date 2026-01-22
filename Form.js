@@ -12,33 +12,45 @@ function AddJob() {
     JobName.setAttribute("placeholder", "Feral Pokemon");
     JobNameLabel.appendChild(JobName);
 
-     var JobPeriodLabel = document.createElement("label");
+
+    var JobPeriodLabel = document.createElement("label");
     JobPeriodLabel.textContent = "Job Period";
 
     var JobPeriod = document.createElement("input");
     JobPeriod.setAttribute("type", "text");
     JobPeriod.classList.add("form-control-lg", "WorkPeriod");
     JobPeriod.setAttribute("placeholder", "3th gen > 8th gen");
+    JobPeriodLabel.appendChild(JobPeriod);
+
+
+    var JobLocationLabel = document.createElement("label");
+    JobLocationLabel.textContent = "Job Location";
 
     var JobLocation = document.createElement("input");
     JobLocation.setAttribute("type", "text");
     JobLocation.classList.add("form-control-lg","WorkLocation");
     JobLocation.setAttribute("placeholder", "Road 6");
+    JobLocationLabel.appendChild(JobLocation);
+
+
+    var JobDescriptionLabel = document.createElement("label");
+    JobDescriptionLabel.textContent = "Job Description";
 
     var JobDescription = document.createElement("input");
     JobDescription.setAttribute("type", "text");
     JobDescription.classList.add("form-control-lg", "WorkDescription");
     JobDescription.setAttribute("placeholder", "Feral Pokemon to practice new trainers");
+    JobDescriptionLabel.appendChild(JobDescription);
 
     const DelExp = document.createElement("button");
     DelExp.classList.add("btn","btn-warning");
     DelExp.textContent = "delete";
     DelExp.addEventListener("click", () => DelExp.parentElement.remove());
     
-    JobDiv.appendChild(JobName);
-    JobDiv.appendChild(JobPeriod);
-    JobDiv.appendChild(JobLocation);
-    JobDiv.appendChild(JobDescription);
+    JobDiv.appendChild(JobNameLabel);
+    JobDiv.appendChild(JobPeriodLabel);
+    JobDiv.appendChild(JobLocationLabel);
+    JobDiv.appendChild(JobDescriptionLabel);
     JobDiv.appendChild(DelExp);
 
     const exp_pro = document.querySelector("#ExpPro");
