@@ -3,12 +3,12 @@ var down = document.getElementById("ExpPro");
 function AddJob() {
     var JobName = document.createElement("input");
     JobName.setAttribute("type", "text");
-    JobDescription.classList.add("form-control-lg", "WorkTitle");
+    JobName.classList.add("form-control-lg", "WorkTitle");
     JobName.setAttribute("placeholder", "Feral Pokemon");
 
     var JobPeriod = document.createElement("input");
     JobPeriod.setAttribute("type", "text");
-    JobDescription.classList.add("form-control-lg", "WorkPeriod");
+    JobPeriod.classList.add("form-control-lg", "WorkPeriod");
     JobPeriod.setAttribute("placeholder", "3th gen > 8th gen");
 
     var JobLocation = document.createElement("input");
@@ -20,6 +20,11 @@ function AddJob() {
     JobDescription.setAttribute("type", "text");
     JobDescription.classList.add("form-control-lg", "WorkDescription");
     JobDescription.setAttribute("placeholder", "Feral Pokemon to practice new trainers");
+
+    const DelExp = document.createElement("button");
+    DelExp.classList.add("btn","btn-warning");
+    DelExp.textContent = "delete";
+    DelExp.addEventListener("click", () => DelExp.parentElement.remove());
     
     const exp_pro = document.querySelector("#ExpPro");
     
@@ -27,6 +32,7 @@ function AddJob() {
     exp_pro.appendChild(JobPeriod);
     exp_pro.appendChild(JobLocation);
     exp_pro.appendChild(JobDescription);
+    exp_pro.appendChild(DelExp);
   }
 
   var down = document.getElementById("Diplos");
