@@ -61,12 +61,21 @@ function AddJob() {
   var down = document.getElementById("Diplos");
 
   function AddDiploma() {
+    const DiploDiv = document.createElement("div");
     var DiploName = document.createElement("input");
+
     DiploName.setAttribute("type", "text");
     DiploName.classList.add("form-control-lg", "Diploma");
     DiploName.setAttribute("placeholder", "Ribbon");
 
-    document.querySelector("#Diplos").appendChild(DiploName);
+    const DelDiplo = document.createElement("button");
+    DelDiplo.classList.add("btn","btn-warning");
+    DelDiplo.textContent = "delete";
+    DelDiplo.addEventListener("click", () => DelDiplo.parentElement.remove());
+
+    DiploDiv.appendChild(DelDiplo);
+    DiploDiv.appendChild(DiploName);
+    document.querySelector("#Diplos").appendChild(DiploDiv);
   }
 
   var down = document.getElementById("Skills");
