@@ -1,10 +1,19 @@
 var down = document.getElementById("ExpPro");
 
 function AddJob() {
+    const JobDiv = document.createElement("div");
+
+    var JobNameLabel = document.createElement("label");
+    JobNameLabel.textContent = "Job Name";
+
     var JobName = document.createElement("input");
     JobName.setAttribute("type", "text");
     JobName.classList.add("form-control-lg", "WorkTitle");
     JobName.setAttribute("placeholder", "Feral Pokemon");
+    JobNameLabel.appendChild(JobName);
+
+     var JobPeriodLabel = document.createElement("label");
+    JobPeriodLabel.textContent = "Job Period";
 
     var JobPeriod = document.createElement("input");
     JobPeriod.setAttribute("type", "text");
@@ -26,13 +35,15 @@ function AddJob() {
     DelExp.textContent = "delete";
     DelExp.addEventListener("click", () => DelExp.parentElement.remove());
     
+    JobDiv.appendChild(JobName);
+    JobDiv.appendChild(JobPeriod);
+    JobDiv.appendChild(JobLocation);
+    JobDiv.appendChild(JobDescription);
+    JobDiv.appendChild(DelExp);
+
     const exp_pro = document.querySelector("#ExpPro");
-    
-    exp_pro.appendChild(JobName);
-    exp_pro.appendChild(JobPeriod);
-    exp_pro.appendChild(JobLocation);
-    exp_pro.appendChild(JobDescription);
-    exp_pro.appendChild(DelExp);
+
+    exp_pro.appendChild(JobDiv);
   }
 
   var down = document.getElementById("Diplos");
