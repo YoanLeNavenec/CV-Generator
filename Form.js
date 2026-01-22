@@ -73,20 +73,29 @@ function AddJob() {
     DelDiplo.textContent = "delete";
     DelDiplo.addEventListener("click", () => DelDiplo.parentElement.remove());
 
-    DiploDiv.appendChild(DelDiplo);
     DiploDiv.appendChild(DiploName);
+    DiploDiv.appendChild(DelDiplo);
     document.querySelector("#Diplos").appendChild(DiploDiv);
   }
 
   var down = document.getElementById("Skills");
 
   function AddSkill() {
+    const SkillDiv = document.createElement("div");
     var SkillName = document.createElement("input");
+
     SkillName.setAttribute("type", "text");
     SkillName.classList.add("form-control-lg", "Skill");
     SkillName.setAttribute("placeholder", "Thunder Jaw");
 
-    document.querySelector("#Skills").appendChild(SkillName);
+    const DelSkill = document.createElement("button");
+    DelSkill.classList.add("btn","btn-warning");
+    DelSkill.textContent = "delete";
+    DelSkill.addEventListener("click", () => DelSkill.parentElement.remove());
+
+    SkillDiv.appendChild(SkillName);
+    SkillDiv.appendChild(DelSkill);
+    document.querySelector("#Skills").appendChild(SkillDiv);
   }
 
    var down = document.getElementById("SoftSkill");
