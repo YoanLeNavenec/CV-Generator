@@ -69,6 +69,8 @@ function AddJob() {
     DiploName.classList.add("form-control-lg", "Diploma");
     DiploName.setAttribute("placeholder", "Ribbon");
 
+
+    
     const DelDiplo = document.createElement("button");
     DelDiplo.classList.add("btn","btn-warning");
     DelDiplo.textContent = "delete";
