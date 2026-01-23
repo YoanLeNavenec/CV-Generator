@@ -24,6 +24,7 @@ function AddJob() {
 
 
     var JobLocationLabel = document.createElement("label");
+    JobLocationLabel.classList.add("form-label");
     JobLocationLabel.textContent = "Job Location";
 
     var JobLocation = document.createElement("input");
@@ -34,6 +35,7 @@ function AddJob() {
 
 
     var JobDescriptionLabel = document.createElement("label");
+    JobDescriptionLabel.classList.add("form-label");
     JobDescriptionLabel.textContent = "Job Description";
 
     var JobDescription = document.createElement("input");
@@ -64,19 +66,35 @@ function AddJob() {
   function AddDiploma() {
     const DiploDiv = document.createElement("div");
     var DiploName = document.createElement("input");
+    var DiploYear = document.createElement("input");
+
+    const DiploNameLabel = document.createElement("label");
+    DiploNameLabel.setAttribute("type", "label");
+    DiploNameLabel.classList.add("form-label");
+    DiploNameLabel.textContent = "Diploma Name";
 
     DiploName.setAttribute("type", "text");
-    DiploName.classList.add("form-control-lg", "Diploma");
+    DiploName.classList.add("form-control-lg", "DiplomaName");
     DiploName.setAttribute("placeholder", "Ribbon");
+    DiploNameLabel.appendChild(DiploName);
 
+    const DiploYearLabel = document.createElement("label");
+    DiploYearLabel.setAttribute("type", "label");
+    DiploYearLabel.classList.add("form-label");
+    DiploYearLabel.textContent = "Year of Obtention";
 
-    
+    DiploYear.setAttribute("type", "text");
+    DiploYear.classList.add("form-control-lg", "DiploYear");
+    DiploYear.setAttribute("placeholder", "4th gen");
+    DiploYearLabel.appendChild(DiploYear);
+
     const DelDiplo = document.createElement("button");
     DelDiplo.classList.add("btn","btn-warning");
     DelDiplo.textContent = "delete";
     DelDiplo.addEventListener("click", () => DelDiplo.parentElement.remove());
 
-    DiploDiv.appendChild(DiploName);
+    DiploDiv.appendChild(DiploNameLabel);
+    DiploDiv.appendChild(DiploYearLabel);
     DiploDiv.appendChild(DelDiplo);
     document.querySelector("#Diplos").appendChild(DiploDiv);
   }
