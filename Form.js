@@ -42,6 +42,7 @@ function AddJob() {
     JobDescription.setAttribute("placeholder", "Feral Pokemon to practice new trainers");
     JobDescriptionLabel.appendChild(JobDescription);
 
+
     const DelExp = document.createElement("button");
     DelExp.classList.add("btn","btn-warning");
     DelExp.textContent = "delete";
@@ -78,6 +79,8 @@ function AddJob() {
     document.querySelector("#Diplos").appendChild(DiploDiv);
   }
 
+
+
   var down = document.getElementById("Skills");
 
   function AddSkill() {
@@ -98,13 +101,23 @@ function AddJob() {
     document.querySelector("#Skills").appendChild(SkillDiv);
   }
 
+
    var down = document.getElementById("SoftSkill");
 
   function AddSoftSkill() {
+    const SoftDiv = document.createElement("div");
     var SoftSkillName = document.createElement("input");
+
     SoftSkillName.setAttribute("type", "text");
     SoftSkillName.classList.add("form-control-lg", "SoftSkill");
     SoftSkillName.setAttribute("placeholder", "Fast");
 
-    document.querySelector("#SoftSkill").appendChild(SoftSkillName);
+    const DelSoft = document.createElement("button");
+    DelSoft.classList.add("btn", "btn-warning");
+    DelSoft.textContent = "delete";
+    DelSoft.addEventListener("click", () => DelSoft.parentElement.remove());
+
+    SoftDiv.appendChild(SoftSkillName);
+    SoftDiv.appendChild(DelSoft);
+    document.querySelector("#SoftSkill").appendChild(SoftDiv);
   }
