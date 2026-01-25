@@ -36,7 +36,7 @@ function AddJob() {
 
     var JobName = document.createElement("input");
     JobName.setAttribute("type", "text");
-    JobName.classList.add("form-control-lg", "WorkTitle");
+    JobName.classList.add("form-control-lg", "Work");
     JobName.setAttribute("placeholder", "Feral Pokemon");
     JobName.setAttribute("name", 'JobName' + NumName());
     JobNameLabel.appendChild(JobName);
@@ -46,7 +46,7 @@ function AddJob() {
 
     var JobPeriod = document.createElement("input");
     JobPeriod.setAttribute("type", "text");
-    JobPeriod.classList.add("form-control-lg", "WorkPeriod");
+    JobPeriod.classList.add("form-control-lg", "Work");
     JobPeriod.setAttribute("placeholder", "3th gen > 8th gen");
     JobPeriod.setAttribute("name", 'JobPeriod' + NumPeriod());
     JobPeriodLabel.appendChild(JobPeriod);
@@ -57,7 +57,7 @@ function AddJob() {
 
     var JobLocation = document.createElement("input");
     JobLocation.setAttribute("type", "text");
-    JobLocation.classList.add("form-control-lg","WorkLocation");
+    JobLocation.classList.add("form-control-lg","Work");
     JobLocation.setAttribute("placeholder", "Road 6");
     JobLocation.setAttribute("name", 'JobLocation' + NumLocation());
     JobLocationLabel.appendChild(JobLocation);
@@ -69,7 +69,7 @@ function AddJob() {
 
     var JobDescription = document.createElement("input");
     JobDescription.setAttribute("type", "text");
-    JobDescription.classList.add("form-control-lg", "WorkDescription");
+    JobDescription.classList.add("form-control-lg", "Work");
     JobDescription.setAttribute("name", 'JobDescription' + NumDescription());
     JobDescription.setAttribute("placeholder", "Feral Pokemon to practice new trainers");
     JobDescriptionLabel.appendChild(JobDescription);
@@ -198,7 +198,8 @@ function AddJob() {
 
     SoftSkillName.setAttribute("type", "text");
     SoftSkillName.classList.add("form-control-lg", "SoftSkill");
-    SoftSkillName.setAttribute.add("name", "SoftSkill" + NumSoftSkill());
+    console.log(SoftSkillName);
+    SoftSkillName.setAttribute("name", "SoftSkill" + NumSoftSkill());
     SoftSkillName.setAttribute("placeholder", "Fast");
 
     const DelSoft = document.createElement("button");
