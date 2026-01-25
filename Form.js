@@ -1,5 +1,33 @@
 var down = document.getElementById("ExpPro");
 
+//Generating a new number for each name and Id in Job Section//
+    var NN = 1;
+
+    function NumName(){
+    NN++;
+    return NN;
+    }
+
+    var NP = 1;
+    function NumPeriod(){
+    NP++;
+    return NP;
+    }
+
+
+    var NL = 1;
+    function NumLocation(){
+    NL++;
+    return NL;
+    }
+
+    var ND= 1;
+    function NumDescription(){
+    ND++;
+    return ND;
+    }
+
+//Generate a new job in the job section//
 function AddJob() {
     const JobDiv = document.createElement("div");
 
@@ -10,8 +38,8 @@ function AddJob() {
     JobName.setAttribute("type", "text");
     JobName.classList.add("form-control-lg", "WorkTitle");
     JobName.setAttribute("placeholder", "Feral Pokemon");
+    JobName.setAttribute("name", 'JobName' + NumName());
     JobNameLabel.appendChild(JobName);
-
 
     var JobPeriodLabel = document.createElement("label");
     JobPeriodLabel.textContent = "Job Period";
@@ -20,8 +48,8 @@ function AddJob() {
     JobPeriod.setAttribute("type", "text");
     JobPeriod.classList.add("form-control-lg", "WorkPeriod");
     JobPeriod.setAttribute("placeholder", "3th gen > 8th gen");
+    JobPeriod.setAttribute("name", 'JobPeriod' + NumPeriod());
     JobPeriodLabel.appendChild(JobPeriod);
-
 
     var JobLocationLabel = document.createElement("label");
     JobLocationLabel.classList.add("form-label");
@@ -31,6 +59,7 @@ function AddJob() {
     JobLocation.setAttribute("type", "text");
     JobLocation.classList.add("form-control-lg","WorkLocation");
     JobLocation.setAttribute("placeholder", "Road 6");
+    JobLocation.setAttribute("name", 'JobLocation' + NumLocation());
     JobLocationLabel.appendChild(JobLocation);
 
 
@@ -41,6 +70,7 @@ function AddJob() {
     var JobDescription = document.createElement("input");
     JobDescription.setAttribute("type", "text");
     JobDescription.classList.add("form-control-lg", "WorkDescription");
+    JobDescription.setAttribute("name", 'JobDescription' + NumDescription());
     JobDescription.setAttribute("placeholder", "Feral Pokemon to practice new trainers");
     JobDescriptionLabel.appendChild(JobDescription);
 
@@ -61,6 +91,23 @@ function AddJob() {
     exp_pro.appendChild(JobDiv);
   }
 
+  //Generate a new number for the names/id's in diploma section//
+
+  var DN = 1;
+
+    function NumDiplo(){
+    DN++;
+    return DN;
+    }
+
+    var NDY = 1;
+    function NumDYear(){
+    NDY++;
+    return NDY;
+    }
+
+  //generate new diploma in diploma section//
+
   var down = document.getElementById("Diplos");
 
   function AddDiploma() {
@@ -76,6 +123,7 @@ function AddJob() {
     DiploName.setAttribute("type", "text");
     DiploName.classList.add("form-control-lg", "DiplomaName");
     DiploName.setAttribute("placeholder", "Ribbon");
+    DiploName.setAttribute("name", 'DiploName' + NumDiplo())
     DiploNameLabel.appendChild(DiploName);
 
     const DiploYearLabel = document.createElement("label");
@@ -85,6 +133,7 @@ function AddJob() {
 
     DiploYear.setAttribute("type", "text");
     DiploYear.classList.add("form-control-lg", "DiploYear");
+    DiploName.setAttribute("name", 'DiploName' + NumDYear())
     DiploYear.setAttribute("placeholder", "4th gen");
     DiploYearLabel.appendChild(DiploYear);
 
@@ -99,7 +148,10 @@ function AddJob() {
     document.querySelector("#Diplos").appendChild(DiploDiv);
   }
 
+  //Generate new number for names/ids in skill section//
+  
 
+  //generate a new skill in the skill section//
 
   var down = document.getElementById("Skills");
 
@@ -121,6 +173,7 @@ function AddJob() {
     document.querySelector("#Skills").appendChild(SkillDiv);
   }
 
+  //generate a new soft skill in the soft skill section//
 
    var down = document.getElementById("SoftSkill");
 

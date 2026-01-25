@@ -33,3 +33,6 @@ const PreviewAdress = document.querySelector('#Preview-Adress');
 InputAdress.addEventListener('input', function(){
   PreviewAdress.textContent = this.value;
 });
+
+//Script for the body here//
+
