@@ -133,7 +133,7 @@ function AddJob() {
 
     DiploYear.setAttribute("type", "text");
     DiploYear.classList.add("form-control-lg", "DiploYear");
-    DiploName.setAttribute("name", 'DiploName' + NumDYear())
+    DiploYear.setAttribute("name", 'DiploName' + NumDYear())
     DiploYear.setAttribute("placeholder", "4th gen");
     DiploYearLabel.appendChild(DiploYear);
 
@@ -149,7 +149,13 @@ function AddJob() {
   }
 
   //Generate new number for names/ids in skill section//
-  
+
+  var NS = 1;
+
+    function NumSkill(){
+    NS++;
+    return NS;
+    }
 
   //generate a new skill in the skill section//
 
@@ -162,6 +168,7 @@ function AddJob() {
     SkillName.setAttribute("type", "text");
     SkillName.classList.add("form-control-lg", "Skill");
     SkillName.setAttribute("placeholder", "Thunder Jaw");
+    SkillName.setAttribute("name", "Skill" + NumSkill());
 
     const DelSkill = document.createElement("button");
     DelSkill.classList.add("btn","btn-warning");
@@ -173,6 +180,14 @@ function AddJob() {
     document.querySelector("#Skills").appendChild(SkillDiv);
   }
 
+  //Generate a new number for names/id in soft skill section//
+  var NSS = 1;
+
+    function NumSoftSkill(){
+    NSS++;
+    return NSS;
+    }
+
   //generate a new soft skill in the soft skill section//
 
    var down = document.getElementById("SoftSkill");
@@ -183,6 +198,7 @@ function AddJob() {
 
     SoftSkillName.setAttribute("type", "text");
     SoftSkillName.classList.add("form-control-lg", "SoftSkill");
+    SoftSkillName.setAttribute.add("name", "SoftSkill" + NumSoftSkill());
     SoftSkillName.setAttribute("placeholder", "Fast");
 
     const DelSoft = document.createElement("button");
